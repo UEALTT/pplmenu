@@ -2,12 +2,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AMA Interactive</title>
+<title>Interactive</title>
 </head>
 
-<body>
+<body style="background-color:grey;">
 	<iframe src="https://uealtt.github.io/humppl/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1000" width="100%" allowfullscreen></iframe>
-		<h1><a href="index.html">Click here to interact</a></h1>
+		
+
+	<center><font face="verdana"><h3>
+  Redirecting to UEA Slides after <span id="countdown">10</span> seconds
+		</h3></font></center>
+<!-- JavaScript part -->
+<script type="text/javascript">
+    
+    // Total seconds to wait
+    var seconds = 300;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "index.html";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+    
+    // Run countdown function
+    countdown();
+    
+</script>
+
 
 </body>
 </html>
